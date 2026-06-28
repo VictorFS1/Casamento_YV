@@ -345,13 +345,50 @@
 
         .swiper-main {
             width: 100%;
-            height: 500px;
+            height: 600px;
         }
 
-        .swiper-slide {
+        /* .swiper-slide {
             background-size: cover;
             background-position: center;
+        } */
+        
+        /* Ajustes individuais de cada slide */
+        .swiper-slide {
+            background-size: cover;        /* valor padrão, você pode alterar */
+            background-position: center;   /* valor padrão, você pode alterar */
+            background-repeat: no-repeat;
         }
+
+    /* Slide 1 - Exemplo: foco no centro, zoom padrão */
+    .slide-1 {
+        background-position: center 50%;  /* desloca o foco verticalmente */
+        background-size: cover;           /* ou 120% para zoom in */
+    }
+
+    /* Slide 2 - Exemplo: foco na parte superior, zoom mais próximo */
+    .slide-2 {
+        background-position: center 25%;
+        background-size: cover;            /* zoom de 130% */
+    }
+
+    /* Slide 3 - Exemplo: foco na parte inferior, zoom suave */
+    .slide-3 {
+        background-position: center 25%;
+        background-size: cover;
+    }
+
+    /* Slide 4 - Exemplo: foco à esquerda, zoom normal */
+    .slide-4 {
+        background-position: center 35%;
+        background-size: cover;
+    }
+
+    /* Slide 5 - Exemplo: foco no centro, zoom maior */
+    .slide-5 {
+        background-position: center 35%;
+        background-size: cover;            /* zoom de 150% */
+    }
 
         .slide-caption {
             position: absolute;
@@ -983,7 +1020,7 @@
             <li><a href="#historia" class="nav-link">Nós</a></li>
             <li><a href="#presentes" class="nav-link">Presentes</a></li>
             <li><a href="#local" class="nav-link">Local</a></li>
-            <li><a href="#confirmacao" class="nav-link">Confirmar Presença</a></li>
+            <!-- <li><a href="#confirmacao" class="nav-link">Confirmar Presença</a></li> -->
         </ul>
     </nav>
 
@@ -1009,36 +1046,43 @@
             </div>
         </section>
 
-        <!-- CARROSSEL DE FOTOS -->
-        <div class="container">
-            <div class="carousel-wrapper">
-                <div class="swiper-main mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide" style="background-image: url('https://victorfs1.github.io/Casamento_YV/assets/WhatsApp%20Image%202026-05-03%20at%2022.38.23.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
-                            <!-- <div class="slide-caption">🌸 Nossa Senhora - Mãe Intercessora</div> -->
-                        </div>
-                       <div class="swiper-slide">
-                        <img src="https://victorfs1.github.io/Casamento_YV/assets/WhatsApp Image 2026-05-03 at 22.47.11.jpeg" class="slide-img">
-    <!-- <div class="slide-caption">✨ Sacramento do Matrimônio</div> -->
-                    </div>
-                        <div class="swiper-slide">
-                            <img src="https://victorfs1.github.io/Casamento_YV/assets/WhatsApp Image 2026-05-03 at 22.47.58.jpeg" class="slide-img">
-                        </div>
-                    </div>
+       
+ <!-- CARROSSEL DE FOTOS -->
+<div class="container">
+    <div class="carousel-wrapper">
+        <div class="swiper-main mySwiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide slide-1" style="background-image: url('https://victorfs1.github.io/Casamento_YV/assets/inicio_1920.jpg');">
                 </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide slide-2" style="background-image: url('https://victorfs1.github.io/Casamento_YV/assets/familia_1920.jpg');">
+                </div>
+                 <!-- Slide 5 -->
+                <div class="swiper-slide slide-5" style="background-image: url('https://victorfs1.github.io/Casamento_YV/assets/olhares_1920.jpg');">
+                </div>
+                <!-- Slide 4 -->
+                <div class="swiper-slide slide-4" style="background-image: url('https://victorfs1.github.io/Casamento_YV/assets/buque_1920.jpg');">
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide slide-3" style="background-image: url('https://victorfs1.github.io/Casamento_YV/assets/risos_1920.jpg');">
+                </div>
+                
+               
             </div>
         </div>
-
+    </div>
+</div>
+    
         <!-- NOSSA HISTÓRIA -->
         <section id="historia" class="section">
             <div class="container">
                 <h2 class="section-title">Nossa História</h2>
                 <div class="story-grid">
                     <div class="story-text">
-                        <p>Nossa história começou de um jeito simples — na academia. Yara, sempre mais calma, na dela. Victor, comunicativo, cheio de energia.</p>
-                        <p>Tudo mudou nas conversas, nas risadas e nos sonhos compartilhados. O que era apenas amizade se transformou em um amor profundo, construído dia após dia.</p>
+                        <p>Nossa história começou de um jeito simples, com um pedido de número de celular não sabiamos que ali começava o nosso "Sim".</p>
                         <p>Em 09 de dezembro de 2015, começamos oficialmente nosso namoro. E desde aquele dia, escolhemos um ao outro todos os dias. Em 17 de setembro de 2026, vivemos o pedido de noivado mais especial de nossas vidas.</p>
-                        <p>Agora, preparamos cada detalhe para celebrar ao lado de quem amamos. Mal podemos esperar para dizer o "sim" e iniciar essa linda jornada juntos.</p>
+                        <p>Agora, preparamos cada detalhe para celebrar ao lado de quem amamos. Mal podemos esperar para dizer o "Sim" no altar e iniciar essa linda jornada em família.</p>
                     </div>
                     <div class="story-image">
                         <img src="https://victorfs1.github.io/Casamento_YV/assets/WhatsApp Image 2026-05-03 at 22.43.37.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Yara e Victor">
@@ -1047,42 +1091,7 @@
             </div>
         </section>
 
-        <!-- TRAJES -->
-        <section id="trajes" class="section" style="background: var(--off-white);">
-            <div class="container">
-                <h2 class="section-title">Trajes e Inspiração</h2>
-                <p class="section-subtitle">Para manter a harmonia e elegância, sugerimos os seguintes estilos</p>
-                <div class="trajes-grid">
-                    <div class="traje-card">
-                        <div class="traje-icon">👗</div>
-                        <h3>Madrinhas</h3>
-                        <p>Vestido longo e liso, no modelo de sua preferência.</p>
-                        <p>Cores suaves e elegantes, evitando vibrantes ou estampas.</p>
-                        <div class="color-palette">
-                            <div class="color-dot" style="background: #DDE5B6;"></div>
-                            <div class="color-dot" style="background: #B7C99A;"></div>
-                            <div class="color-dot" style="background: #8A9A5B;"></div>
-                            <div class="color-dot" style="background: #6B7B3A;"></div>
-                            <div class="color-dot" style="background: #3E4A1F;"></div>
-                        </div>
-                    </div>
-                    <div class="traje-card">
-                        <div class="traje-icon">👔</div>
-                        <h3>Padrinhos</h3>
-                        <p>Terno cinza claro</p>
-                        <p>Camisa branca</p>
-                        <p>Gravata no tom do terno</p>
-                        <p>Sapato preto</p>
-                    </div>
-                    <div class="traje-card">
-                        <div class="traje-icon">💒</div>
-                        <h3>Convidados</h3>
-                        <p>Vestimenta social elegante. Cores claras e tons terrosos são bem-vindos. Evitem branco e off-white.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+       
         <!-- LISTA DE PRESENTES APENAS COM IMAGENS -->
         <section id="presentes" class="section">
             <div class="container">
@@ -1107,7 +1116,7 @@
                     <div class="local-card">
                         <h3>💒 Cerimônia Religiosa</h3>
                         <p><strong>Data:</strong> 09 de Janeiro de 2027</p>
-                        <p><strong>Horário:</strong> 17h20</p>
+                        <p><strong>Horário:</strong> 17h30</p>
                         <p><strong>Igreja:</strong> Paróquia Imaculada Conceição</p>
                         <p><strong>Endereço:</strong> Av. Brigadeiro Luís Antônio, 2071 - Bela Vista, SP</p>
                     </div>
@@ -1122,7 +1131,7 @@
         </section>
 
         <!-- CONFIRMAÇÃO DE PRESENÇA -->
-        <section id="confirmacao" class="section">
+        <!-- <section id="confirmacao" class="section">
             <div class="container">
                 <h2 class="section-title">Confirme sua Presença</h2>
                 <p class="section-subtitle">Por favor, confirme até 30 dias antes do evento. Sua presença é muito importante para nós!</p>
@@ -1132,7 +1141,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
     </main>
 
     <footer>
@@ -1188,24 +1197,22 @@
 
         // LISTA DE PRESENTES COM IMAGENS EXTERNAS
         const allGifts = [
-            { image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=400&h=300&fit=crop", title: "Vinho Especial para o Jantar", value: 20, pix: "yara.victor.vinho@banco.com", thanks: "Um brinde ao amor! Esse vinho vai acompanhar nosso primeiro jantar especial." },
-            { image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&h=300&fit=crop", title: "Livro de Casamentos e Oração", value: 35, pix: "yara.victor.livro@banco.com", thanks: "Que benção! Esse livro estará sempre em nossa cabeceira." },
-            { image: "https://images.unsplash.com/photo-1603006905003-be475563bc59?w=400&h=300&fit=crop", title: "Kit Velas Aromáticas", value: 45, pix: "yara.victor.velas@banco.com", thanks: "Suas velas vão iluminar nossos momentos a dois." },
-            { image: "https://images.unsplash.com/photo-1549007954-2f2d0b742f19?w=400&h=300&fit=crop", title: "Caixa de Chocolates Finos", value: 30, pix: "yara.victor.choco@banco.com", thanks: "Doce gesto! Vamos saborear cada pedacinho." },
-            { image: "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=400&h=300&fit=crop", title: "Planta para a Nova Casa", value: 50, pix: "yara.victor.planta@banco.com", thanks: "Essa plantinha vai crescer junto com nosso amor." },
-            { image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=300&fit=crop", title: "Kit Cafeteira Especial", value: 80, pix: "yara.victor.cafe@banco.com", thanks: "Nossas manhãs serão mais aconchegantes." },
-            { image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop", title: "Jantar em Restaurante Italiano", value: 150, pix: "yara.victor.jantar@banco.com", thanks: "Uma noite italiana inesquecível! Grazie mille." },
-            { image: "https://images.unsplash.com/photo-1508780709619-79562169bc64?w=400&h=300&fit=crop", title: "Cesta de Piquenique", value: 120, pix: "yara.victor.piquenique@banco.com", thanks: "Piquenique no parque com essa linda cesta! Perfeito." },
-            { image: "https://images.unsplash.com/photo-1507924538820-ede94a04019d?w=400&h=300&fit=crop", title: "Ingressos para Teatro", value: 200, pix: "yara.victor.teatro@banco.com", thanks: "Cultura e amor! Vamos assistir um musical incrível." },
-            { image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=400&h=300&fit=crop", title: "Dia de Spa para o Casal", value: 280, pix: "yara.victor.spa@banco.com", thanks: "Relaxamento garantido! Seu presente vai renovar nossas energias." },
-            { image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=300&fit=crop", title: "Hospedagem Romântica", value: 350, pix: "yara.victor.hotel@banco.com", thanks: "Uma escapadinha romântica! Sonho realizado." },
-            { image: "https://images.unsplash.com/photo-1569098644584-210bcd375b59?w=400&h=300&fit=crop", title: "Brunch + Espumante", value: 180, pix: "yara.victor.brunch@banco.com", thanks: "Manhãs de domingo nunca foram tão especiais!" },
-            { image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&h=300&fit=crop", title: "Passagem Aérea Nacional", value: 500, pix: "yara.victor.passagem@banco.com", thanks: "Vamos conhecer novos horizontes! Que presente incrível." },
-            { image: "https://images.unsplash.com/photo-1593784991095-a205069470b6?w=400&h=300&fit=crop", title: "Smart TV 43''", value: 800, pix: "yara.victor.smarttv@banco.com", thanks: "Nossas noites de filme nunca mais serão as mesmas!" },
-            { image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=300&fit=crop", title: "Kit Malas de Viagem", value: 450, pix: "yara.victor.malas@banco.com", thanks: "Viajaremos com estilo! Agora temos as malas perfeitas." },
-            { image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&h=300&fit=crop", title: "Alianças de Prata", value: 600, pix: "yara.victor.alianca@banco.com", thanks: "Símbolo eterno do nosso amor. Vocês são demais!" },
-            { image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=400&h=300&fit=crop", title: "Curso para Noivos", value: 550, pix: "yara.victor.curso@banco.com", thanks: "Aprenderemos juntos! Gratidão por investir no nosso futuro." },
-            { image: "https://images.unsplash.com/photo-1503095396549-8070c209c48b?w=400&h=300&fit=crop", title: "Jantar Romântico em Paris", value: 1000, pix: "yara.victor.paris@banco.com", thanks: "Paris, amor e torre Eiffel! Sonho realizado. Merci beaucoup!" }
+            { image: "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=400&h=300&fit=crop", title: "Planta para a Nova Casa", value: 50, pix: "pix.casal@gmail.com", thanks: "Essa plantinha vai crescer junto com nosso amor." },
+            { image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&h=300&fit=crop", title: "Livro de Casamentos e Oração", value: 60, pix: "pix.casal@gmail.com", thanks: "Que benção! Esse livro estará sempre em nossa cabeceira." },
+            { image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=400&h=300&fit=crop", title: "Vinho Especial para o Jantar", value: 80, pix: "pix.casal@gmail.com", thanks: "Um brinde ao amor! Esse vinho vai acompanhar nosso primeiro jantar especial." },
+            { image: "https://cdn.awsli.com.br/2500x2500/1962/1962908/produto/155540355/dde89a8234.jpg?w=400&h=300&fit=crop", title: "Caixa de Chocolates Finos", value: 90, pix: "pix.casal@gmail.com", thanks: "Doce gesto! Vamos saborear cada pedacinho." },
+            { image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop", title: "Jantar em Restaurante Italiano", value: 180, pix: "pix.casal@gmail.com", thanks: "Uma noite italiana inesquecível! Grazie mille." },
+            { image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=400&h=300&fit=crop", title: "Dia de Spa para a noiva", value: 220, pix: "pix.casal@gmail.com", thanks: "Relaxamento garantido! Seu presente vai renovar nossas energias." },
+            { image: "https://images6.alphacoders.com/865/thumb-1920-865619.png?w=400&h=300&fit=crop", title: "Skin de CS para o Noivo", value: 120, pix: "pix.casal@gmail.com", thanks: "Skin de CS para melhorar a gameplay do noivo!" },
+            { image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=300&fit=crop", title: "Hospedagem Romântica", value: 350, pix: "pix.casal@gmail.com", thanks: "Uma escapadinha romântica! Sonho realizado." },
+            { image: "https://images.tcdn.com.br/img/img_prod/502737/combo_makita_dlx2131_parafusadeira_de_impacto_parafusadeira_furadeira_com_2_baterias_3_0ah_18v_carre_4838_1_1b016e0e4aa42d5ba317da73f0da2bd3_20251013164901.jpg?w=400&h=300&fit=crop", title: "KIT Makita para o noivo", value: 300, pix: "pix.casal@gmail.com", thanks: "Ferramenta essencial para o noivo trocar uma tomada!" },
+            { image: "https://i.pinimg.com/736x/b7/bc/fc/b7bcfc67dc7559b31d873c833611174d.jpg?w=400&h=300&fit=crop", title: "Livros Católicos da noiva", value: 150, pix: "pix.casal@gmail.com", thanks: "Leituras favoritas da noiva!" },
+            { image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&h=300&fit=crop", title: "Passagem Aérea Nacional", value: 500, pix: "pix.casal@gmail.com", thanks: "Vamos conhecer novos horizontes! Que presente incrível." },
+            { image: "https://images.unsplash.com/photo-1593784991095-a205069470b6?w=400&h=300&fit=crop", title: "Smart TV''", value: 800, pix: "pix.casal@gmail.com", thanks: "Nossas noites de filme nunca mais serão as mesmas!" },
+            { image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=300&fit=crop", title: "Kit Malas de Viagem", value: 450, pix: "pix.casal@gmail.com", thanks: "Viajaremos com estilo! Agora temos as malas perfeitas." },
+            { image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&h=300&fit=crop", title: "Joias da noiva", value: 600, pix: "pix.casal@gmail.com", thanks: "A noiva não pode usar bijus, pois tem alergia!" },
+            { image: "https://cdn0.casamentos.com.br/article-vendor/0450/original/1280/jpg/lua-de-mel-3_13_430450-171659791693756.jpeg?w=400&h=300&fit=crop", title: "Lua de mel", value: 1550, pix: "pix.casal@gmail.com", thanks: "Aprenderemos juntos! Gratidão por investir no nosso futuro." },
+            { image: "https://caravaggiopraiahotel.com.br/wp-content/uploads/2020/04/Primeira-viagem-de-aviao.jpg?w=400&h=300&fit=crop", title: "Viajar na Lua de mel junto com os noivos", value: 10000, pix: "pix.casal@gmail.com", thanks: "Venha participar com a gente desse momento!" }
         ];
 
         const itemsPerPage = 6;
