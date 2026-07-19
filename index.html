@@ -593,6 +593,132 @@
             }
         }
 
+        /* FORMULÁRIO DE CONFIRMAÇÃO */
+        .form-container {
+            max-width: 600px;
+            margin: 40px auto 0;
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 24px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--olive-soft);
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            color: var(--olive-green);
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+            background: var(--off-white);
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--olive-green);
+            box-shadow: 0 0 0 3px rgba(85, 107, 47, 0.15);
+            background: var(--white);
+        }
+
+        .form-group input::placeholder {
+            color: #bbb;
+        }
+
+        .btn-submit {
+            background: var(--olive-green);
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .btn-submit:hover {
+            background: var(--olive-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-submit:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .form-message {
+            margin-top: 20px;
+            padding: 12px;
+            border-radius: 12px;
+            font-weight: 500;
+            display: none;
+        }
+
+        .form-message.success {
+            display: block;
+            background: #e6f7e6;
+            color: #2d6a2d;
+            border: 1px solid #b8e0b8;
+        }
+
+        .form-message.error {
+            display: block;
+            background: #fde8e8;
+            color: #a13d3d;
+            border: 1px solid #f5c2c2;
+        }
+
+        @media (max-width: 768px) {
+            .form-container {
+                padding: 30px 20px;
+                margin: 30px 16px 0;
+            }
+            .form-group input {
+                padding: 10px 14px;
+                font-size: 0.95rem;
+            }
+            .btn-submit {
+                padding: 12px 24px;
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .form-container {
+                padding: 24px 16px;
+                margin: 20px 12px 0;
+            }
+            .form-group {
+                margin-bottom: 18px;
+            }
+            .form-group input {
+                padding: 10px 12px;
+                font-size: 0.9rem;
+            }
+        }
+
         /* FOOTER */
         footer {
             background-color: var(--olive-green);
@@ -621,7 +747,7 @@
             <li><a href="#historia" class="nav-link">Nós</a></li>
             <li><a href="#presentes" class="nav-link">Presentes</a></li>
             <li><a href="#local" class="nav-link">Local</a></li>
-            <!-- <li><a href="#confirmacao" class="nav-link">Confirmar Presença</a></li> -->
+            <li><a href="#confirmacao" class="nav-link">Confirmar Presença</a></li>
         </ul>
     </nav>
 
@@ -689,18 +815,17 @@
             </div>
         </section>
 
-         <section id="presentes" class="section">
+        <section id="presentes" class="section">
             <div class="container">
                 <h2 class="section-title">Presentes</h2>
                 <p class="section-subtitle">
-    Sua presença já é o nosso maior presente! Mas, se desejar nos ajudar nos primeiros passos da nossa nova vida a dois, nossa chave Pix é:<br> <strong>yaraevictor0901@gmail.com</strong>
-    <span style="color: var(--olive-green); font-size: 14px; display: block; margin-top: 15px;">
-        "A gratidão é a memória do coração", e os nossos guardarão com muito afeto a sua generosidade. Que Deus o(a) abençoe! ❤️
-    </span>
-</p>
+                    Sua presença já é o nosso maior presente! Mas, se desejar nos ajudar nos primeiros passos da nossa nova vida a dois, nossa chave Pix é:<br> <strong>yaraevictor0901@gmail.com</strong>
+                    <span style="color: var(--olive-green); font-size: 14px; display: block; margin-top: 15px;">
+                        "A gratidão é a memória do coração", e os nossos guardarão com muito afeto a sua generosidade. Que Deus o(a) abençoe! ❤️
+                    </span>
+                </p>
             </div>
         </section>
-
 
         <!-- LOCAL -->
         <section id="local" class="section" style="background: var(--off-white);">
@@ -724,20 +849,31 @@
             </div>
         </section>
 
-        <!-- CONFIRMAÇÃO DE PRESENÇA (comentado) -->
-        <!--
+        <!-- CONFIRMAÇÃO DE PRESENÇA -->
         <section id="confirmacao" class="section">
             <div class="container">
                 <h2 class="section-title">Confirme sua Presença</h2>
                 <p class="section-subtitle">Por favor, confirme até 30 dias antes do evento. Sua presença é muito importante para nós!</p>
                 <div class="form-container">
-                    <div class="forms-placeholder">
-                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdVXAr51WhzVw5IEKGefpnU9KbMzelfY0nLcEWX32S7xRFr8g/viewform?embedded=true" frameborder="0">Carregando…</iframe>
-                    </div>
+                    <form id="confirm-form" novalidate>
+                        <div class="form-group">
+                            <label for="nome">Nome Completo</label>
+                            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="celular">Número Celular</label>
+                            <input type="tel" id="celular" name="celular" placeholder="(00) 00000-0000" required pattern="\(\d{2}\) \d{5}-\d{4}">
+                        </div>
+                        <div class="form-group">
+                            <label for="codigo">Código de Confirmação</label>
+                            <input type="text" id="codigo" name="codigo" placeholder="Código informado no convite" required>
+                        </div>
+                        <button type="submit" class="btn-submit" id="btn-submit">Confirmar Presença</button>
+                        <div id="form-message" class="form-message"></div>
+                    </form>
                 </div>
             </div>
         </section>
-        -->
     </main>
 
     <footer>
@@ -795,6 +931,71 @@
                 } 
             }); 
         });
+
+        // FORMULÁRIO DE CONFIRMAÇÃO - ENVIO PARA GCP
+        (function() {
+            const form = document.getElementById('confirm-form');
+            const messageEl = document.getElementById('form-message');
+            const submitBtn = document.getElementById('btn-submit');
+
+            // 🔽 ALTERE ESTA URL PARA O ENDPOINT DA SUA FUNÇÃO NO GCP 🔽
+            const GCP_ENDPOINT = 'https://confirmar-casamento-vg-504763904926.southamerica-east1.run.app';
+
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+
+                // Limpa mensagem anterior
+                messageEl.className = 'form-message';
+                messageEl.style.display = 'none';
+                messageEl.textContent = '';
+
+                // Coleta dados
+                const nome = document.getElementById('nome').value.trim();
+                const celular = document.getElementById('celular').value.trim();
+                const codigo = document.getElementById('codigo').value.trim();
+
+                // Validação rápida (além do HTML5)
+                if (!nome || !celular || !codigo) {
+                    showMessage('Por favor, preencha todos os campos.', 'error');
+                    return;
+                }
+
+                // Desabilita botão durante envio
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Enviando...';
+
+                try {
+                    const response = await fetch(GCP_ENDPOINT, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ nome, celular, codigo })
+                    });
+
+                    const data = await response.json();
+
+                    if (response.ok) {
+                        showMessage('✅ Confirmação realizada com sucesso! Obrigado!', 'success');
+                        form.reset();
+                    } else {
+                        showMessage(`❌ Erro: ${data.message || 'Não foi possível confirmar. Tente novamente.'}`, 'error');
+                    }
+                } catch (error) {
+                    console.error('Erro na requisição:', error);
+                    showMessage('❌ Erro de conexão. Verifique sua internet e tente novamente.', 'error');
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Confirmar Presença';
+                }
+            });
+
+            function showMessage(text, type) {
+                messageEl.textContent = text;
+                messageEl.className = 'form-message ' + type;
+                messageEl.style.display = 'block';
+            }
+        })();
     </script>
 </body>
 </html>
